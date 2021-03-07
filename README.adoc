@@ -38,6 +38,8 @@ download available from: https://projectlombok.org
 
 == Jib builder and run using a Docker image
 
+image::diagrams/jib-flow.png[Jib Flow]
+
 . To create the image, Jib can use the *local* Docker daemon
 
 	mvn package jib:dockerBuild -Dimage=examples/helloStranger
