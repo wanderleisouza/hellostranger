@@ -1,1 +1,51 @@
-toc
+= Hello Stranger 
+:toc:
+
+== Just another hello world example
+
+=== Install Java 11
+
+	brew tap AdoptOpenJDK/openjdk
+	brew cask install adoptopenjdk11
+	which java
+	
+=== Instal Maven3
+
+ 	brew install maven
+ 	mvn --version
+	
+=== Install Docker Desktop for Mac and 
+
+https://docs.docker.com/docker-for-mac/install/ 
+
+Verify docker installation
+ 
+	docker -v
+
+=== SpringToolSuite4/Eclipse Plugins (Optional)
+
+https://marketplace.eclipse.org/content/asciidoctor-editor
+
+Optional: +
+https://marketplace.eclipse.org/content/yaml-editor
+
+=== Install Lombok
+
+download available from: https://projectlombok.org
+
+	java -jar lombok.jar
+
+
+== Jib builder and run using a Docker image
+
+. To create the image, Jib can use the *local* Docker daemon
+
+	mvn package jib:dockerBuild -Dimage=examples/helloStranger
+	
+== Diagrams
+
+You (or anybody else) can edit `/diagrams` folder using https://draw.io + github integradion, draw.io can export diagrams as png and other formats.
+
+This entire document can be exported as .pdf using assciidoc command-line tool:
+
+    asciidoctor-pdf README.adoc
